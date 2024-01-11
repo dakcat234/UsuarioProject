@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UsuarioProject</name>
+    </assembly>
+    <members>
+        <member name="M:UsuarioProject.Controllers.UserController.Post(Business.DTO.UserDTO)">
+            <summary>
+            Metodo que crea un usuario
+            </summary>
+            <param name="usuario">datos ingresados en el swagger</param>
+            <returns>Retorna un objeto creado</returns>
+        </member>
+        <member name="M:UsuarioProject.Controllers.UserController.Get(System.Guid)">
+            <summary>
+            Metodo que obtiene un usuario por id
+            </summary>
+            <param name="id">usuaior id</param>
+            <returns>Objeto usuario por id</returns>
+        </member>
+        <member name="M:UsuarioProject.Controllers.UserController.Delete(System.Guid)">
+            <summary>
+            Metodo que borra un usuario por su id
+            </summary>
+            <param name="userId">id ingresada desde el swagger</param>
+            <returns>Confirma que el usuario ha sido borrado</returns>
+        </member>
+        <member name="M:UsuarioProject.Controllers.UserController.Put(System.Guid,Business.DTO.UserUpdateDTO)">
+            <summary>
+            Actualiza el usuario por su id
+            </summary>
+            <param name="usuario">id solicitada por swagger</param>
+            <returns>confirma la actualización del usuario</returns>
+        </member>
+        <member name="T:PopsyMarket.Filters.ExtenderTokenHeaderFilter">
+            <summary>
+            Filtro de acción para extender el tiempo de vida de un token en el encabezado de la respuesta.
+            </summary>
+        </member>
+        <member name="M:PopsyMarket.Filters.ExtenderTokenHeaderFilter.#ctor(UsuarioProject.Settings.TokenSettings)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:PopsyMarket.Filters.ExtenderTokenHeaderFilter"/>.
+            </summary>
+            <param name="settings">Configuración del token.</param>
+        </member>
+        <member name="M:PopsyMarket.Filters.ExtenderTokenHeaderFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Método que se ejecuta antes de la ejecución de una acción en un controlador.
+            Extiende el tiempo de vida del token en el encabezado de la respuesta.
+            </summary>
+            <param name="context">Contexto de ejecución de la acción.</param>
+        </member>
+        <member name="M:PopsyMarket.Filters.ExtenderTokenHeaderFilter.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Método que se ejecuta después de la ejecución de una acción en un controlador.
+            No se realiza ninguna acción en este caso.
+            </summary>
+            <param name="context">Contexto de ejecución de la acción.</param>
+        </member>
+        <member name="T:PopsyMarket.Utilities.TokenUtilities">
+            <summary>
+            Clase que maneja las utilidades de los tokens.
+            </summary>
+        </member>
+        <member name="M:PopsyMarket.Utilities.TokenUtilities.ExtenderTokenHeader(Microsoft.AspNetCore.Mvc.ControllerBase,UsuarioProject.Settings.TokenSettings)">
+            <summary>
+            Metodo que extiende la vida de un token.
+            </summary>
+            <param name="controller"><see cref="T:Microsoft.AspNetCore.Mvc.ControllerBase"/> instancia.</param>
+            <param name="settings"><see cref="T:UsuarioProject.Settings.TokenSettings"/> objeto.</param>
+        </member>
+    </members>
+</doc>
